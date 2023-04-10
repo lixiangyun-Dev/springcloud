@@ -16,7 +16,10 @@ import org.springframework.web.client.RestTemplate;
 @RequestMapping
 public class OrderController {
     //调用支付订单服务端的ip+端口号
-    public static final  String PAYMENT_URL = "http://localhost:8001";
+//    public static final  String PAYMENT_URL = "http://localhost:8001";
+
+//    集群版服务配置,通过服务名（mcroservice-payment）调用
+    public static final  String PAYMENT_URL = "http://MCROSERVICE-PAYMENT";
 
     @Autowired
     private RestTemplate restTemplate;
