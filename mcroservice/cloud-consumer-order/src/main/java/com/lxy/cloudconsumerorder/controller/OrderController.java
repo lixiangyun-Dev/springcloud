@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
+import javax.annotation.Resource;
+
 @Slf4j
 @RestController
 @RequestMapping
@@ -21,7 +23,7 @@ public class OrderController {
 //    集群版服务配置,通过服务名（mcroservice-payment）调用
     public static final  String PAYMENT_URL = "http://MCROSERVICE-PAYMENT";
 
-    @Autowired
+    @Resource
     private RestTemplate restTemplate;
 
     @GetMapping("/consumer/payment/hello")

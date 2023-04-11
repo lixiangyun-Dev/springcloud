@@ -6,9 +6,12 @@ import com.lxy.cloudprovidepayment.service.PaymentService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.client.ServiceInstance;
+import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 
 @Slf4j
@@ -17,6 +20,9 @@ import javax.annotation.Resource;
 public class PaymentControler {
     @Resource
     private PaymentService paymentService;
+
+    @Resource
+    private DiscoveryClient discoveryClient;
 
     @Value("${server.port}")
     private String serverPort;
@@ -48,6 +54,23 @@ public class PaymentControler {
         }else{
             return new CommonResult(444,"查询失败",null);
         }
+    }
+
+
+    //获取服务信息
+    @GetMapping("/discovery")
+    public  Object discovery(){
+        List<String> services = discoveryClient.getServices();
+        for (String s : services){
+            log.info("********注册到eureka中的服务中有:"+services);
+        }
+        List <ServiceInstance> instances = discoveryClient.getInstances("MCROSERVICE-PAYMENT");
+        for (ServiceInstance s: instances) {
+            log.info("当前服务的实例有"+s.getServiceId()+"\t"+s.getHost()+"\t"+s.getPort()+"\t"+s.getUri());
+        }
+        int order = discoveryClient.getOrder();
+        log.info("order:"+order);
+        return this.discoveryClient;
     }
 
 
