@@ -11,6 +11,8 @@
         <option value="$PROJECT_DIR$/cloud-eureka-server/pom.xml" />
         <option value="$PROJECT_DIR$/cloud-eureka-server02/pom.xml" />
         <option value="$PROJECT_DIR$/cloud-provide-payment02/pom.xml" />
+        <option value="$PROJECT_DIR$/cloud-providerconsul-payment04/pom.xml" />
+        <option value="$PROJECT_DIR$/cloud-consumerconsul-order/pom.xml" />
       </list>
     </option>
   </component>
