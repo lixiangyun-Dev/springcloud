@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 
 @Slf4j
@@ -56,6 +57,14 @@ public class PaymentControler {
         }
     }
 
+
+    //模拟业务接口延时3秒
+    @GetMapping("/feign/timeout")
+    public String PaymentFeignTimeOut() throws InterruptedException {
+        TimeUnit.SECONDS.sleep(3);
+        log.info("serverPort端口号为："+serverPort);
+        return serverPort;
+    }
 
     //获取服务信息
     @GetMapping("/discovery")
