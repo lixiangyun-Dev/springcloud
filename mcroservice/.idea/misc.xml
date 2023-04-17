@@ -15,6 +15,8 @@
         <option value="$PROJECT_DIR$/cloud-consumerconsul-order/pom.xml" />
         <option value="$PROJECT_DIR$/cloud-provide-payment03/pom.xml" />
         <option value="$PROJECT_DIR$/cloud-consumer-feign-order/pom.xml" />
+        <option value="$PROJECT_DIR$/cloud-provider-hystrix-payment8001/pom.xml" />
+        <option value="$PROJECT_DIR$/cloud-consumer-feign-hystrix-order/pom.xml" />
       </list>
     </option>
   </component>
