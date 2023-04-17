@@ -6,6 +6,9 @@ import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 
+/**
+ * @EnableCircuitBreaker   //激活业务类上加的@HystrixCommand注解
+ */
 
 @SpringBootApplication
 @EnableEurekaClient
