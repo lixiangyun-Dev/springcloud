@@ -12,6 +12,8 @@
     <modules>
         <module>cloud-api-commons</module>
         <module>cloud-provide-payment</module>
+        <module>cloud-gateway-gateway9528</module>
+        <module>cloud-gateway-gateway9529</module>
     </modules>
 
     <properties>

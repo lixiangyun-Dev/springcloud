@@ -18,6 +18,9 @@
         <option value="$PROJECT_DIR$/cloud-provider-hystrix-payment8001/pom.xml" />
         <option value="$PROJECT_DIR$/cloud-consumer-feign-hystrix-order/pom.xml" />
         <option value="$PROJECT_DIR$/cloud-consumer-hystrix-dashboar/pom.xml" />
+        <option value="$PROJECT_DIR$/cloud-gateway-gateway9527/pom.xml" />
+        <option value="$PROJECT_DIR$/cloud-config-center/pom.xml" />
+        <option value="$PROJECT_DIR$/cloud-config-client/pom.xml" />
       </list>
     </option>
   </component>

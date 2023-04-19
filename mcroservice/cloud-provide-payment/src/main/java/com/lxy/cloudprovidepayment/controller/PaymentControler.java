@@ -57,6 +57,12 @@ public class PaymentControler {
         }
     }
 
+    @GetMapping("/lb")
+    public String lb(){
+        log.info("serverPort-8001:"+serverPort);
+        return serverPort;
+    }
+
 
     //模拟业务接口延时3秒
     @GetMapping("/feign/timeout")
